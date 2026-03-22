@@ -27,15 +27,16 @@
 
 ## 📂 Project Structure
 
-The project is currently contained within a single standalone file for easy deployment:
-- **`Taroudant Bike.html`**: Contains the HTML structure, CSS styling, and JavaScript logic.
+The project starts here:
+- **`index.html`**: The main landing page (HTML, CSS, JS).
+- **`README.md`**: Project documentation.
 
 ---
 
 ## 🛠️ How to Use
 
-1. **Clone/Download**: Download the `Taroudant Bike.html` file.
-2. **Open**: Double-click the file to open it in any modern web browser (Chrome, Edge, Safari, Firefox).
+1. **Clone/Download**: Download the repository or specific files.
+2. **Open**: Double-click the `index.html` file to open it in any modern web browser.
 3. **Browse & Book**:
    - Scroll through the available bikes.
    - Check the rental rates in the "Offers" section.
@@ -46,18 +47,8 @@ The project is currently contained within a single standalone file for easy depl
 ## 🎨 Customization
 
 To customize the website for your own needs:
-- **Change Colors**: Locate the `:root` variables in the `<style>` section:
-  ```css
-  :root {
-    --main-color: #ff8800; /* Main brand color */
-    --dark-bg: #111;    /* Primary background */
-    /* ... */
-  }
-  ```
-- **Update Phone Number**: Change the `phone` constant in the JavaScript section to your own WhatsApp number:
-  ```javascript
-  const phone = '212636076918';
-  ```
+- **Change Colors**: Locate the `:root` variables in the CSS section of `index.html`.
+- **Update Phone Number**: Change the `phone` constant in the JavaScript section of `index.html` to your own WhatsApp number.
 
 ---
 
