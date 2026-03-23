@@ -6,6 +6,13 @@
   <title>Taroudant Bike</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMjgUOHaRX5cViJr0uWoAxNk-xHFWxo6LhWANO6Av2A2RQf1fJjAuO_i9KEfz-dnxb63iT_uOmKMowxuDL8Pd4QMl8AGMsd9EA62Nr6xsTFvyPhRwxOgXExacR4yLkg_g88Bel943HH5crWTiA1Vo1mdS_Eu3KmJBS6SklVY6C3o4YJjaQwGIgULAr/s320/(Ingl%C3%A9s).png" type="image/png">
+  
+  <!-- PWA Meta Tags -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ff8800">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="T-Bike">
 
   <style>
     :root {
@@ -283,6 +290,15 @@
   </footer>
 
   <script>
+  // Service Worker Registration for PWA
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js')
+        .then(reg => console.log('Service Worker registered.'))
+        .catch(err => console.log('Service Worker failed:', err));
+    });
+  }
+
   window.onload = () => {
     document.getElementById('date').min = new Date().toISOString().split('T')[0];
   };
@@ -305,7 +321,6 @@
     window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
   }
 </script>
-  </script>
 
 </body>
 </html>
